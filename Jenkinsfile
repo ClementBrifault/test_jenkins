@@ -8,6 +8,6 @@ node{
     }
     stage('run script'){
         bat '..\\virtualenv\\Scripts\\python.exe main.py'
-        bat 'echo version5'
+        bat 'echo version6'
     }
 }
