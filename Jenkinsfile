@@ -7,6 +7,7 @@ node{
         ..\\virtualenv\\Scripts\\pip.exe install -r requirements.txt'''
     }
     stage('run script'){
-        bat '..\\virtualenv\\Scripts\\python.exe main.py'
+        bat '''..\\virtualenv\\Scripts\\python.exe main.py
+        echo version1'''
     }
 }
