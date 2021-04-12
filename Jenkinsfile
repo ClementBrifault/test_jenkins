@@ -1,6 +1,6 @@
 node("linux_machine"){
     stage('Git Clone'){
-        sh 'git clone https://github.com/ClementBrifault/test_jenkins.git'
+        git branch: 'main', url: 'https://github.com/ClementBrifault/test_jenkins.git'
     }
     stage('create virtualenv'){
         sh '''python3 -m venv ../virtualenv
