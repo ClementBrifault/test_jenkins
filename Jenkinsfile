@@ -3,11 +3,10 @@ node("linux_machine"){
         git branch: 'main', credentialsId: 'd08c9709-01cf-417c-a446-57fcb46789a4', url: 'https://github.com/ClementBrifault/test_jenkins'
     }
     stage('create virtualenv'){
-        bat '''python -m venv ..\\virtualenv
-        ..\\virtualenv\\Scripts\\pip.exe install -r requirements.txt'''
+        sh '''python3 -m venv ../virtualenv
+        ../virtualenv/Scripts/pip install -r requirements.txt'''
     }
     stage('run script'){
-        bat '..\\virtualenv\\Scripts\\python.exe main.py'
-        bat 'echo version7'
+        sh '../virtualenv/Scripts/python.exe main.py'
     }
 }
