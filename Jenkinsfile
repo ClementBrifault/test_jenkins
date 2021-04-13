@@ -4,7 +4,7 @@ node("windows"){
     }
     stage('create virtualenv'){
         bat '''python -m venv ..\\virtualenv
-        ..\\virtualenv\\Scripts\\pip install -r requirements.txt'''
+        ..\\virtualenv\\Scripts\\pip.exe install -r requirements.txt'''
     }
     stage('run script'){
         bat '..\\virtualenv\\Scripts\\python.exe main.py'
