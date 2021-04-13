@@ -8,6 +8,5 @@ node("windows"){
     }
     stage('run script'){
         bat '..\\virtualenv\\Scripts\\python.exe main.py'
-        bat 'echo hello'
     }
 }
