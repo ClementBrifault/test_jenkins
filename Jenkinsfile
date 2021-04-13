@@ -1,6 +1,6 @@
 node("windows"){
     stage('Git Clone'){
-        git branch: 'main', credentialsId: 'd08c9709-01cf-417c-a446-57fcb46789a4', url: 'https://github.com/ClementBrifault/test_jenkins.git'
+        git branch: 'brch1', credentialsId: 'd08c9709-01cf-417c-a446-57fcb46789a4', url: 'https://github.com/ClementBrifault/test_jenkins.git'
     }
     stage('create virtualenv'){
         bat '''python -m venv ..\\virtualenv
